@@ -7,26 +7,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desafio Integrador</title>
     <link rel="stylesheet" href="./assets/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <header class="seccion">
-        <img src="./assets/Logo@2x.png" alt="Logo de Allura">
+        <img src="./assets/Logo@2x.png" class="logo" alt="Logo de Allura">
     </header>
     <main class="seccion">
-        <section class="columna">
-            <h1>Ingrese el texto aquí</h1>
+        <section class="columna izquierda">
+            <div>
+                <textarea class="encripta" name="texto" id="texto" cols="72" rows="12"
+                    placeholder="Ingrese el texto aquí"></textarea>
+            </div>
+            <div>
+                <p class="aviso">Solo letras minúsculas y sin acentos</p>
+                <div class="botones">
+                    <button class="btn-encriptar">Encriptar</button>
+                    <button class="btn-desencriptar">Desencriptar</button>
+                </div>
+            </div>
         </section>
-        <section class="columna">
-            <img src="./assets/Muñeco.png" alt="Muñeco de Allura">
-            <h2>Ningún mensaje fue encontrado</h2>
-            <p>Ingrese el texto que desees encriptar o desencriptar</p>
+        <section class="columna rectangulo">
+            <div class="inactivo">
+                <img class="allurakid" src="./assets/Muñeco.png" alt="Muñeco de Allura">
+                <p class="titular">Ningún mensaje fue encontrado</p>
+                <p class="parrafo">Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+            <textarea class="desencripta" name="texto" id="texto" cols="30" rows="10"></textarea>
+            <div>
+                <button class="btn-copiar">copiar</button>
+            </div>
         </section>
     </main>
     <footer class="seccion">
-        <p>Solo letras minúsculas y sin acentos</p>
-        <button>Encriptar</button>
-        <button>Desencriptar</button>
     </footer>
 </body>
 

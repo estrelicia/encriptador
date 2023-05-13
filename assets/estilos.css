@@ -1,59 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap");
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, img, ins, kbd, q, s, samp,
-small, strike, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
+  background-color: #f3f5fc;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 body {
-    width: 100%;
+  font-family: "Inter", sans-serif;
+  width: 100%;
 }
-.seccion {
-    display: flex;
-    align-content: center;
+header.seccion {
+   margin-top:2%;
+   padding-left: 5%;
+}
+main.seccion {
+  display: flex;
+  justify-content: center;
+}
+.logo {
+  width: 120px;
 }
 .columna {
-    width: 50%;
-    padding: 10px;
+  width: 50%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.izquierda {
+  padding: 5%;
+  height: 65vh;
+}
+.rectangulo {
+  width: 400px;
+  height: 70vh;
+  margin-top: 40px;
+  padding: 24px;
+  background: #ffffff;
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+  border-radius: 32px;
+}
+.desencripta {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 150%;
+  color: #495057;
+  border: none;
+}
+.desencripta:focus {
+  outline: none;
+}
+.encripta {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 150%;
+  color: #0A3871;
+  background-color: #f3f5fc;
+  border: none;
+  margin-left:2%;
+}
+::placeholder {
+  font-family: "Inter", sans-serif;
+  color: #0A3871;
+}
+.encripta:focus {
+	outline: none;
+}
+.btn-copiar {
+  padding: 20px;
+  height: 65px;
+  width: 100%;
+  border: 1px solid #0a3871;
+  border-radius: 24px;
+  background-color: #ffffff;
+}
+.btn-encriptar {
+  padding: 20px;
+  height: 65px;
+  width: 100%;
+  border: 1px solid #0a3871;
+  border-radius: 24px;
+  background-color: #0a3871;
+  color: #ffffff;
+  margin: 0 15px 0 15px;
+}
+.btn-desencriptar {
+  padding: 20px;
+  height: 65px;
+  width: 100%;
+  border: 1px solid #0a3871;
+  border-radius: 24px;
+  background-color: #D8DFE8;
+  margin: 0 15px 0 15px;
+}
+.botones {
+  display: flex;
+}
+.aviso {
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 150%;
+	color: #495057;
+	opacity: 0.8;
+	margin-left:3%;
+	margin-bottom: 15px;
+}
+.aviso::before {
+	font: var(--fa-font-solid);
+	content: "\f06a";
+	margin-right: 5px;
+}
+.inactivo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding:2% 5%;
+}
+.allurakid {
+	width: 75%;
+}
+.titular {
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 120%;
+text-align: center;
+color: #343A40;
+}
+.parrafo {
+	font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+text-align: center;
+color: #495057;
 }
