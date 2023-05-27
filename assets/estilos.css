@@ -127,6 +127,8 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+/* Estilos */
 body {
   font-family: "Inter", sans-serif;
   width: 100%;
@@ -162,18 +164,19 @@ main.seccion {
   box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
   border-radius: 32px;
 }
-.desencripta {
+.textoResultado {
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
   line-height: 150%;
   color: #495057;
   border: none;
+  display:none;
 }
 .desencripta:focus {
   outline: none;
 }
-.encripta {
+.textoIngresado {
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -190,15 +193,16 @@ main.seccion {
 .encripta:focus {
 	outline: none;
 }
-.btn-copiar {
+#btn-copiar {
   padding: 20px;
   height: 65px;
   width: 100%;
   border: 1px solid #0a3871;
   border-radius: 24px;
   background-color: #ffffff;
+  display:none;
 }
-.btn-encriptar {
+#btn-encriptar {
   padding: 20px;
   height: 65px;
   width: 100%;
@@ -208,7 +212,7 @@ main.seccion {
   color: #ffffff;
   margin: 0 15px 0 15px;
 }
-.btn-desencriptar {
+#btn-desencriptar {
   padding: 20px;
   height: 65px;
   width: 100%;
@@ -220,7 +224,7 @@ main.seccion {
 .botones {
   display: flex;
 }
-.aviso {
+#aviso {
 	font-family: 'Inter';
 	font-style: normal;
 	font-weight: 400;
@@ -231,19 +235,20 @@ main.seccion {
 	margin-left:3%;
 	margin-bottom: 15px;
 }
-.aviso::before {
+#aviso::before {
 	font: var(--fa-font-solid);
 	content: "\f06a";
 	margin-right: 5px;
 }
-.inactivo {
+#inactivo {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding:2% 5%;
 }
-.allurakid {
+#allurakid {
 	width: 75%;
+  margin:0 auto;
 }
 .titular {
 font-family: 'Inter';
@@ -255,7 +260,7 @@ text-align: center;
 color: #343A40;
 }
 .parrafo {
-	font-family: 'Inter';
+font-family: 'Inter';
 font-style: normal;
 font-weight: 400;
 font-size: 16px;

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta author="Estrelicia & Maluco">
     <title>Desafio Integrador</title>
     <link rel="stylesheet" href="./assets/estilos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -19,31 +20,29 @@
     <main class="seccion">
         <section class="columna izquierda">
             <div>
-                <textarea class="encripta" name="texto" id="texto" cols="72" rows="12"
+                <textarea class="textoIngresado" name="textoIngresado" id="textoIngresado" cols="65" rows="12"
                     placeholder="Ingrese el texto aquí"></textarea>
             </div>
             <div>
-                <p class="aviso">Solo letras minúsculas y sin acentos</p>
+                <p id="aviso">Solo letras minúsculas y sin acentos</p>
                 <div class="botones">
-                    <button class="btn-encriptar">Encriptar</button>
-                    <button class="btn-desencriptar">Desencriptar</button>
+                    <button id="btn-encriptar">Encriptar</button>
+                    <button id="btn-desencriptar">Desencriptar</button>
                 </div>
             </div>
         </section>
         <section class="columna rectangulo">
-            <div class="inactivo">
-                <img class="allurakid" src="./assets/Muñeco.png" alt="Muñeco de Allura">
-                <p class="titular">Ningún mensaje fue encontrado</p>
-                <p class="parrafo">Ingresa el texto que desees encriptar o desencriptar.</p>
+                <img id="allurakid" src="./assets/Muñeco.png" alt="Muñeco de Allura">
+            <div id="inactivo">
             </div>
-            <textarea class="desencripta" name="texto" id="texto" cols="30" rows="10"></textarea>
+            <textarea class="textoResultado" name="textoResultado" id="textoResultado" cols="30" rows="10"></textarea>
             <div>
-                <button class="btn-copiar">copiar</button>
+                <button id="btn-copiar">copiar</button>
             </div>
         </section>
     </main>
     <footer class="seccion">
     </footer>
+    <script src="../assets/codigo.js"></script>
 </body>
-
 </html>
