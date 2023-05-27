@@ -15,8 +15,9 @@ const textosCSS = `
    color: #495057;`;
 
 document.getElementById("btn-encriptar").addEventListener("click", encriptar);
+document.getElementById("btn-desencriptar").addEventListener("click", desencriptar);
 
-function encriptar(textoEncriptar) {
+function encriptar(textoDesencriptar) {
   let matrizEncriptado = [
     ["e", "enter"],
     ["i", "imes"],
@@ -25,12 +26,12 @@ function encriptar(textoEncriptar) {
     ["u", "ufat"],
   ];
    
-  textoEncriptar = document
+  textoDesencriptar = document
     .getElementById("textoIngresado")
     .value;
 
-  if (textoEncriptar.length > 0) {
-    if (textoEncriptar.match(/([áéíóúA-Z])/g) !== null) {
+  if (textoDesencriptar.length > 0) {
+    if (textoDesencriptar.match(/([áéíóúA-Z])/g) !== null) {
         document.getElementById("aviso").style.cssText = avisoCSSalert;
         document.getElementById("inactivo").style.display = "block";  
         document.getElementById("inactivo").style.cssText = textosCSS;
@@ -38,17 +39,18 @@ function encriptar(textoEncriptar) {
         sintexto();
     } else {
        for (let i = 0; i < matrizEncriptado.length; i++) {
-        textoEncriptar = textoEncriptar.replaceAll(
+        textoDesencriptar = textoDesencriptar.replaceAll(
           matrizEncriptado[i][0],
           matrizEncriptado[i][1]
         );
       }
+      document.getElementById("inactivo").style.display = "none"; 
       document.getElementById("aviso").style.cssText = avisoCSS;
       document.getElementById("allurakid").style.display = "none";
       document.getElementById("textoResultado").style.display = "block";   
       document.getElementById("btn-copiar").style.display = "block";  
       return (document.getElementById("textoResultado").innerHTML =
-        textoEncriptar);
+        textoDesencriptar);
     }
   } else {
       document.getElementById("aviso").style.cssText = avisoCSS;
@@ -67,16 +69,40 @@ function desencriptar(textoDesencriptar) {
     ["ober", "o"],
     ["ufat", "u"],
   ];
-  textoDesencriptar = textoDesencriptar.toLowerCase();
-  if (textoDesencriptar.length > 0) {
-    for (let i = 0; i < matrizDesencriptado.length; i++) {
+
+  textoDesencriptar = document
+  .getElementById("textoIngresado")
+  .value;
+
+if (textoDesencriptar.length > 0) {
+  if (textoDesencriptar.match(/([áéíóúA-Z])/g) !== null) {
+      document.getElementById("aviso").style.cssText = avisoCSSalert;
+      document.getElementById("inactivo").style.display = "block";  
+      document.getElementById("inactivo").style.cssText = textosCSS;
+      document.getElementById("inactivo").innerText = "Recuerda \nDebes ingresar letras minúsculas y sin acentos"
+      sintexto();
+  } else {
+     for (let i = 0; i < matrizDncriptado.length; i++) {
       textoDesencriptar = textoDesencriptar.replaceAll(
         matrizDesencriptado[i][0],
         matrizDesencriptado[i][1]
       );
     }
+    document.getElementById("inactivo").style.display = "none"; 
+    document.getElementById("aviso").style.cssText = avisoCSS;
+    document.getElementById("allurakid").style.display = "none";
+    document.getElementById("textoResultado").style.display = "block";   
+    document.getElementById("btn-copiar").style.display = "block";  
+    return (document.getElementById("textoResultado").innerHTML =
+      textoDesencriptar);
   }
-  return console.log(textoDesencriptar);
+} else {
+    document.getElementById("aviso").style.cssText = avisoCSS;
+    document.getElementById("inactivo").style.display = "block"; 
+    document.getElementById("inactivo").style.cssText = textosCSS;
+    document.getElementById("inactivo").innerText = "Recuerda \nPrimero debes ingresar un texto para encriptar o desencriptar.";
+    sintexto();
+}
 }
 
 function sintexto () {
