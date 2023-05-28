@@ -132,28 +132,28 @@ table {
 body {
   font-family: "Inter", sans-serif;
 }
-header {
-   margin:2.5%;
-}
 footer {
   margin:2.5%;
 }
+
 .logo {
-  width: 120px;
+  width:100px;
+  margin: 5% 0 5% 0;
 }
 .rectangulo {
   padding: 24px;
   background-color: #ffffff;
   box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
   border-radius: 32px;
+  margin:0;
 }
 .textoResultado {
   font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 150%;
-  color: #495057;
-  border: none;
+  font-weight: 400!important;
+  font-size: 24px!important;
+  line-height: 150%!important;
+  color: #495057!important;
+  border: none!important;
   display:none;
 }
 .desencripta:focus {
@@ -161,13 +161,16 @@ footer {
 }
 .textoIngresado {
   font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 150%;
-  color: #0A3871;
-  background-color: #f3f5fc;
-  border: none;
-  margin-left:2%;
+  font-weight: 400!important;
+  font-size: 24px!important;
+  line-height: 150%!important;
+  color: #0A3871!important;
+  background-color: #f3f5fc!important;
+  border: none!important;
+  margin-bottom: 2.5%!important;
+}
+.textoIngresado:active {
+  outline: none;
 }
 ::placeholder {
   font-family: "Inter", sans-serif;
@@ -194,6 +197,11 @@ footer {
   background-color: #0a3871;
   color: #ffffff;
 }
+#btn-encriptar::before {
+	font: var(--fa-font-solid);
+	content: "\f023";
+	margin-right: 5px;
+}
 #btn-desencriptar {
   padding: 20px;
   height: 65px;
@@ -202,7 +210,11 @@ footer {
   border-radius: 24px;
   background-color: #D8DFE8;
 }
-
+#btn-desencriptar::before {
+	font: var(--fa-font-solid);
+	content: "\f3c1";
+	margin-right: 5px;
+}
 #aviso {
 	font-family: 'Inter';
 	font-style: normal;
@@ -211,7 +223,7 @@ footer {
 	line-height: 150%;
 	color: #495057;
 	opacity: 0.8;
-	margin-left:3%;
+	margin-left:1%;
 	margin-bottom: 15px;
 }
 #aviso::before {
@@ -219,14 +231,8 @@ footer {
 	content: "\f06a";
 	margin-right: 5px;
 }
-#inactivo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding:2% 5%;
-}
 #allurakid {
- margin:0 auto;
+  margin: 0 auto;
 }
 .titular {
 font-family: 'Inter';
@@ -246,9 +252,15 @@ line-height: 150%;
 text-align: center;
 color: #495057;
 }
-
 .textofooter {
   font-size:0.8rem;
-  padding:0 15px;
+  padding-right: 15px;
   line-height: 1rem;
+  margin: 0;
+}
+@media screen and (max-width: 768px) {
+  #allurakid {
+    margin: 0 auto;
+    display:none;
+  }
 }
