@@ -82,7 +82,7 @@ if (textoDesencriptar.length > 0) {
       document.getElementById("inactivo").innerText = "Recuerda \nDebes ingresar letras minúsculas y sin acentos"
       sintexto();
   } else {
-     for (let i = 0; i < matrizDncriptado.length; i++) {
+     for (let i = 0; i < matrizDesencriptado.length; i++) {
       textoDesencriptar = textoDesencriptar.replaceAll(
         matrizDesencriptado[i][0],
         matrizDesencriptado[i][1]

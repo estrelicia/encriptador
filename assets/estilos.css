@@ -106,7 +106,7 @@ section {
 }
 body {
   line-height: 1;
-  background-color: #f3f5fc;
+  background-color: #f3f5fc!important;
 }
 ol,
 ul {
@@ -131,36 +131,19 @@ table {
 /* Estilos */
 body {
   font-family: "Inter", sans-serif;
-  width: 100%;
 }
-header.seccion {
-   margin-top:2%;
-   padding-left: 5%;
+header {
+   margin:2.5%;
 }
-main.seccion {
-  display: flex;
-  justify-content: center;
+footer {
+  margin:2.5%;
 }
 .logo {
   width: 120px;
 }
-.columna {
-  width: 50%;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.izquierda {
-  padding: 5%;
-  height: 65vh;
-}
 .rectangulo {
-  width: 400px;
-  height: 70vh;
-  margin-top: 40px;
   padding: 24px;
-  background: #ffffff;
+  background-color: #ffffff;
   box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
   border-radius: 32px;
 }
@@ -210,7 +193,6 @@ main.seccion {
   border-radius: 24px;
   background-color: #0a3871;
   color: #ffffff;
-  margin: 0 15px 0 15px;
 }
 #btn-desencriptar {
   padding: 20px;
@@ -219,11 +201,8 @@ main.seccion {
   border: 1px solid #0a3871;
   border-radius: 24px;
   background-color: #D8DFE8;
-  margin: 0 15px 0 15px;
 }
-.botones {
-  display: flex;
-}
+
 #aviso {
 	font-family: 'Inter';
 	font-style: normal;
@@ -247,8 +226,7 @@ main.seccion {
   padding:2% 5%;
 }
 #allurakid {
-	width: 75%;
-  margin:0 auto;
+ margin:0 auto;
 }
 .titular {
 font-family: 'Inter';
@@ -267,4 +245,10 @@ font-size: 16px;
 line-height: 150%;
 text-align: center;
 color: #495057;
+}
+
+.textofooter {
+  font-size:0.8rem;
+  padding:0 15px;
+  line-height: 1rem;
 }
