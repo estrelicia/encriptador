@@ -20,35 +20,35 @@
         <img src="./assets/Logo@2x.png" class="logo" alt="Logo de Allura">
     </header>
 
-    <main class="container-fluid">
-        <div class="row gy-3">
-            <section class="col-sm-12 col-lg-8">
-                <div class="container gx-0 align-content-between">
+    <main class="container-fluid gx-5">
+        <div class="row gy-3 justify-content-center">
+            <section class="col-sm-12 col-lg-6 d-flex">
+                <div class="container col-ajustes gx-0">
                     <div class="row gx-0">
                         <textarea class="form-control textoIngresado" name="textoIngresado" id="textoIngresado"
-                            placeholder="Ingrese el texto aquí"></textarea>
+                            placeholder="Ingrese el texto aquí" rows="6"></textarea>
                     </div>
                     <div class="row gx-0">
                         <p id="aviso">Solo letras minúsculas y sin acentos</p>
-                        <div class="row gx-2 justify-content-center botones gy-2">
-                            <div class="col-sm-12 col-md-6">
+                        <div class="row justify-content-center botones gy-2 gx-2">
+                            <div class="col-sm-12 col-md-6 d-flex justify-content-center">
                                 <button id="btn-encriptar">Encriptar</button>
                             </div>
-                            <div class="col-sm-12 col-md-6">
+                            <div class="col-sm-12 col-md-6 d-flex justify-content-center">
                                 <button id="btn-desencriptar">Desencriptar</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="col-sm-12 col-lg-4">
-                <div class="container gx-0">
-                    <div class="row rectangulo gx-0">
-                        <div class="col text-center">
+            <section class="col-sm-12 col-lg-3">
+                <div class="container col-ajustes gx-0">
+                    <div class="rectangulo gx-0">
+                        <div class="col text-center col-ajustes">
                             <img class="img-fluid" id="allurakid" src="./assets/Muñeco.png" alt="Muñeco de Allura">
                             <span id="inactivo"></span>
                             <textarea class="form-control textoResultado" name="textoResultado"
-                                id="textoResultado"></textarea>
+                                id="textoResultado" rows="6"></textarea>
                             <button id="btn-copiar">copiar</button>
                         </div>
                     </div>

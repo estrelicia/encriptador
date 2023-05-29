@@ -16,6 +16,7 @@ const textosCSS = `
 
 document.getElementById("btn-encriptar").addEventListener("click", encriptar);
 document.getElementById("btn-desencriptar").addEventListener("click", desencriptar);
+document.getElementById("btn-copiar").addEventListener("click", copiar);
 
 function encriptar(textoDesencriptar) {
   let matrizEncriptado = [
@@ -33,9 +34,7 @@ function encriptar(textoDesencriptar) {
   if (textoDesencriptar.length > 0) {
     if (textoDesencriptar.match(/([áéíóúA-Z])/g) !== null) {
         document.getElementById("aviso").style.cssText = avisoCSSalert;
-        document.getElementById("inactivo").style.display = "block";  
-        document.getElementById("inactivo").style.cssText = textosCSS;
-        document.getElementById("inactivo").innerText = "Recuerda \nDebes ingresar letras minúsculas y sin acentos"
+        document.getElementById("aviso").style.display = "block";
         sintexto();
     } else {
        for (let i = 0; i < matrizEncriptado.length; i++) {
@@ -55,6 +54,7 @@ function encriptar(textoDesencriptar) {
   } else {
       document.getElementById("aviso").style.cssText = avisoCSS;
       document.getElementById("inactivo").style.display = "block"; 
+      document.getElementById("textoResultado").style.display = "none";   
       document.getElementById("inactivo").style.cssText = textosCSS;
       document.getElementById("inactivo").innerText = "Recuerda \nPrimero debes ingresar un texto para encriptar o desencriptar.";
       sintexto();
@@ -76,10 +76,8 @@ function desencriptar(textoDesencriptar) {
 
 if (textoDesencriptar.length > 0) {
   if (textoDesencriptar.match(/([áéíóúA-Z])/g) !== null) {
-      document.getElementById("aviso").style.cssText = avisoCSSalert;
-      document.getElementById("inactivo").style.display = "block";  
-      document.getElementById("inactivo").style.cssText = textosCSS;
-      document.getElementById("inactivo").innerText = "Recuerda \nDebes ingresar letras minúsculas y sin acentos"
+    document.getElementById("aviso").style.cssText = avisoCSSalert;
+    document.getElementById("aviso").style.display = "block";
       sintexto();
   } else {
      for (let i = 0; i < matrizDesencriptado.length; i++) {
@@ -99,6 +97,7 @@ if (textoDesencriptar.length > 0) {
 } else {
     document.getElementById("aviso").style.cssText = avisoCSS;
     document.getElementById("inactivo").style.display = "block"; 
+    document.getElementById("textoResultado").style.display = "none";   
     document.getElementById("inactivo").style.cssText = textosCSS;
     document.getElementById("inactivo").innerText = "Recuerda \nPrimero debes ingresar un texto para encriptar o desencriptar.";
     sintexto();
@@ -106,7 +105,10 @@ if (textoDesencriptar.length > 0) {
 }
 
 function sintexto () {
-   document.getElementById("allurakid").style.display = "none";
-   document.getElementById("textoResultado").style.display = "none";
    document.getElementById("btn-copiar").style.display = "none";
+}
+
+function copiar () {
+   let copiarTexto = document.getElementById("textoResultado").value;
+   console.log(copiarTexto);
 }
